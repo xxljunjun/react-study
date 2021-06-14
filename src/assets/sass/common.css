@@ -1,0 +1,100 @@
+.box {
+  color: green;
+  font-size: 80px;
+}
+
+.qf-main .qf-box > span {
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.qf-main .qf-box .on {
+  background: chocolate;
+  color: #fff;
+  border-color: chocolate;
+}
+
+.qf-combine {
+  width: 520px;
+  height: 260px;
+  box-sizing: border-box;
+  margin: 50px auto;
+  border: 1px solid orange;
+}
+
+.qf-combine .qf-top {
+  height: 50px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-bottom: 1px solid orange;
+  line-height: 50px;
+}
+
+.qf-combine .qf-top > span {
+  margin-left: 20px;
+}
+
+.qf-combine .qf-top > :last-child {
+  margin-right: 20px;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.qf-combine .qf-middle {
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 160px;
+  width: 100%;
+  padding: 30px 20px 20px;
+  padding-left: 120px;
+}
+
+.qf-combine .qf-middle span {
+  display: inline-block;
+  width: 70px;
+}
+
+.qf-combine .qf-middle div div {
+  margin-top: 10px;
+}
+
+.qf-combine .qf-middle .psword {
+  letter-spacing: 10px;
+}
+
+.qf-combine .qf-buttom {
+  border-top: 1px solid orange;
+  box-sizing: border-box;
+  height: 50px;
+  overflow: hidden;
+}
+
+.qf-combine .qf-buttom div > span {
+  float: right;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border: 1px solid orange;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.qf-combine .qf-buttom div > span.info {
+  background: seagreen;
+  color: #fff;
+  border: 1px solid seagreen;
+}
+
+.qf-combine .qf-buttom div > span.del {
+  background: orange;
+  color: #fff;
+}

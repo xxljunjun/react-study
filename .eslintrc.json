@@ -1,0 +1,16 @@
+{
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        //0,1,2
+        //off,warn,error
+        "semi": "off",//需要添加分号
+        "no-console":"off"//打印控制台会失败
+    }
+}

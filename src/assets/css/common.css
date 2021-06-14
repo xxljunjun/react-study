@@ -1,0 +1,15 @@
+.he{
+    font-size: 20px;
+    color: red;
+}
+.img{
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+.active_1{
+    display: block;
+}
+.active_2{
+    display: none;
+}
