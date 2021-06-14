@@ -30,6 +30,7 @@ const config ={
     plugins:[
         //用于把打包后的js/css等资源，自动插入到public/index.html中(开发环境下css/js也会插入到index.html中)
         new HtmlWebpackPlugin({
+            //可以去HtmlWebpackPlugin的githu仓库看命令
             template:path.resolve(__dirname,'public/index.html'),
             //<title><%= htmlWebpackPlugin.options.title %></title>更改index的title
             title:'xxl的react首页'
@@ -89,10 +90,11 @@ if(isDev){
     //本地服务
     // 要配合 webpack-dev-server 一起使用
     config.devServer={
-        //可以在这里运行项目后打开浏览器，也可以在命令行配置--open打开
+        //可以在这里运行项目后打开浏览器，也可以在命令行配置--open 'chrome'打开
         open:true,
         port:8888,
-        // host:'10.20.158.146',
+        // host: "0.0.0.0", //如果你想外部服务器也能访问
+        // host:'10.20.158.146', 
         hot:true,//启用本地node服务中的socket长连接来实时通信
         contentBase: './public',//指定本地服务的静态资源目录
         // 当本地项目运行时，发生errors错误，以覆盖层的方式遮住视图

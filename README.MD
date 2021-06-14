@@ -89,7 +89,11 @@ module.exports ={
 ```
 # 五、 让public文件夹和src文件夹建立联系
 ```
-    npm install --save-dev html-webpack-plugin
+npm install --save-dev html-webpack-plugin
+
+```
+```
+    
 
     //把打包后的js/css等资源，自动插入到public/index.html中(小功能html中的title)(开发环境下css/js也会插入到index.html中)
     const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -107,7 +111,11 @@ module.exports ={
 ```
 # 六、自动删除dist文件夹下的打包文件
 ```
-// 在每次执行npm run build时，自动帮我们清理掉dist
+npm install clean-webpack-plugin --save-dev
+
+```
+```
+// 在每次执行npm run build时，自动帮我们清理掉dist(中文文档没有更新)
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports ={
@@ -138,6 +146,7 @@ module.exports ={
 
 ```
 //英文文档
+模块热替换HRM
 module.exports ={
     devServer:{
         hot:true  //启用本地node服务中的socket长连接来实时通信
