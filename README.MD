@@ -154,8 +154,7 @@ module.exports ={
 }
 ```
 
-# 八、使用loaders
-
+# 八、使用css-loaders,scss-loader,file-loader
 
 + 配置css,sass文件,在webpack中一切皆模块,在main.js文件中可以使用import引入sass，css文件
 ```
@@ -163,9 +162,12 @@ module.exports ={
 npm install --save-dev style-loader css-loader
 
 //为了从 JavaScript 模块中 import 一个 saSS 文件,需要安装node-sass,sass-loader,style-loader和css-loader
+
 npm install --save-dev style-loader css-loader
 npm install node-sass -D
 npm install sass-loader -D
+
+//注意node-sass和node.js的版本问题
 
 module.exports ={
     module:{
@@ -177,8 +179,6 @@ module.exports ={
     }
 }
 ```
-
-
 + 配置图片img，在js文件中可以用import引入assets里面的图片 
 ```
 npm install --save-dev file-loader      // file-loader的作用，是专门用于加载图片资源的。
@@ -195,16 +195,14 @@ module:{
 }
 ```
 
-
+# 九、bable使用bable-loader
+//在webpack中的bable-loader中安装使用bable，babel是js的编译器
 + 配置bable，js文件能编译成浏览器兼容的es5代码，是javascript语法编辑器，转化成浏览器能兼容的ES5语法
 ```
-npm install bable-loader -D  //加载js文件交给@babel/*
-npm install @babel/core -D  //babel的核心模块
+npm install bable-loader -D  //用于加载js文件交给@babel/系列的编译器
+npm install @babel/core -D  //babel的核心库
 npm install @babel/preset-env -D  //用于编译大多数的ES6语法编译成主流浏览器能识别的ES5代码
-```
-```
-import './assets/css/common.css'
-import './assets/sass/common.scss'
+
 ```
 ```
 //配置react.config.js文件
@@ -221,6 +219,7 @@ module:{
 
 ```
 //配置babel.config.js文件
+//要让 babel生效，在项目根目录，还要添加 babel.config.js 配置文件
 module.exports ={
     // preset 是Babel对不同版本的js语法的一种支持编译
     // plugin 是用于某些特殊语法的支持与编译
@@ -229,9 +228,11 @@ module.exports ={
     'presets':["@babel/preset-env"]
 }
 ```
+# 十、ESlint使用ESlint-loader
+主要作用检测js语法规范
 + 配置ESlint,当代码变化时，先检测代码规范，只有当代码满足规范时，才执行其它的。它的目标是提供一个插件化的javascript代码检测工具。
 ```
-npm install eslint --save-dev
+npm install eslint --save-dev !!!失效了
 npm install eslint-webpack-plugin --save-dev
 
 //配置.eslintrc.json文件，有6种文件格式,.js的优先级最高
@@ -247,7 +248,7 @@ npm install eslint-webpack-plugin --save-dev
         //0,1,2
         //off,warn,error
         "semi": 0,//需要添加分号
-        "no-console":"off"//打印控制台会失败
+        "no-console":"off"//打印控制台会失败规则
     }
 }
 
@@ -276,7 +277,7 @@ console.log('disable eslint')   // eslint-disable-line
 /* eslint-enable */
 ```
 
-# 九、区别生产环境和开发环境
+# 十一、区别生产环境和开发环境
 + react.config.js，无论是执行npm run build和npm start都是从这个文件开始的。
 ```
 npm install cross-env -D //一个很好用的包，nodejs进程里面添加环境变量,在启动环境中添加NODE_ENV环境变量

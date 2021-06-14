@@ -9,11 +9,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 //nodejs的内置变量process.env,专门用来存储环境变量的
-const isDev =process.env.NODE_ENV==='development'
+const isDev =process.env.NODE_ENV==='development'  //isDev是Boolen值
 console.log('-------------------------',isDev,process.env.NODE_ENV)
 const config ={
     //在这里写生产环境的配置
-    mode:"production",
+    mode:"production", //加了才会出来覆盖层
     //入口
     // entry:path.resolve(__dirname,'./src/main.js'),
     entry:{
@@ -71,7 +71,7 @@ const config ={
             //添加@绝对路径
             "@":path.resolve(__dirname,'src')
         },
-        //添加可以省略的文件后缀列表
+        //添加可以省略的文件后缀列表（和顺序有关系）
         extensions: ['.js', '.jsx', '.ts', '.json', '.css', '.vue']
     }
 }
@@ -82,7 +82,7 @@ if(isDev){
     //一个可以让我们精准定位错误的代码的字符devtool
     config.devtool="source-map"
     config.plugins.push(
-        //ESlint，当代码变化时，先检测代码规范，只有当代码满足规范时，才执行其它的 后置loader的处理
+        //ESlint，当代码变化时，先检测代码规范，只有当代码满足规范时，才执行其它的 后置loader的处理---eslint-loader废弃！！！
         new ESLintPlugin({
             exclude: ['node_modules']
         })
