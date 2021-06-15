@@ -1,0 +1,71 @@
+.jsxstudy .title {
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+  width: 150px;
+  height: 40px;
+  background: red;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.jsxstudy .box {
+  font-size: 16px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+.jsxstudy .item-box {
+  display: flex;
+}
+
+.jsxstudy .item-box .items {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+}
+
+.jsxstudy .item-box .items .imgs {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.jsxstudy .aline {
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.jsxstudy .btnbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.jsxstudy .btnbox .btn {
+  width: 100px;
+  height: 30px;
+  background: red;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.jsxstudy .btnbox .btnAdd {
+  margin-right: 20px;
+}
