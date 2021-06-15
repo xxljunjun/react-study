@@ -16,6 +16,7 @@ export default class jsxtext extends React.Component {
 		return (
 			<div style={fontcolor} className="jsxstudy">
 				<div className="title">{str}</div>
+				{/* 这是react组件中的注释功能 */}
 				{twoName}
 				<div className="item-box">
 					{item}
@@ -23,6 +24,7 @@ export default class jsxtext extends React.Component {
 					{item}
 					{item}
 				</div>
+				{/* 这是react组件中的注释功能 */}
 				{allName}
 				<div className="item-box">
 					{item}
