@@ -93,22 +93,13 @@ if (isDev) {
     )
     //本地服务
     // 要配合 webpack-dev-server 一起使用
-<<<<<<< HEAD
     config.devServer = {
-        //可以在这里运行项目后打开浏览器，也可以在命令行配置--open打开
+        //可以在这里运行项目后打开浏览器，也可以在命令行配置--open 'chrome'打开
         open: true,
         port: 8888,
-        // host:'10.20.158.146',
-        hot: true,//启用本地node服务中的socket长连接来实时通信
-=======
-    config.devServer={
-        //可以在这里运行项目后打开浏览器，也可以在命令行配置--open 'chrome'打开
-        open:true,
-        port:8888,
         // host: "0.0.0.0", //如果你想外部服务器也能访问
         // host:'10.20.158.146',
-        hot:true,//启用本地node服务中的socket长连接来实时通信
->>>>>>> remotes/origin/react-1.0.0
+        hot: true,//启用本地node服务中的socket长连接来实时通信
         contentBase: './public',//指定本地服务的静态资源目录
         // 当本地项目运行时，发生errors错误，以覆盖层的方式遮住视图
         overlay: {
