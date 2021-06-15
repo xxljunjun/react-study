@@ -9,11 +9,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 //nodejs的内置变量process.env,专门用来存储环境变量的
-const isDev = process.env.NODE_ENV === 'development'
+const isDev = process.env.NODE_ENV === 'development'  //isDev是Boolen值
 console.log('-------------------------', isDev, process.env.NODE_ENV)
 const config = {
     //在这里写生产环境的配置
-    mode: "production",
+    mode: "production", //加了才会出来覆盖层
     //入口
     // entry:path.resolve(__dirname,'./src/main.js'),
     entry: {
@@ -30,6 +30,7 @@ const config = {
     plugins: [
         //用于把打包后的js/css等资源，自动插入到public/index.html中(开发环境下css/js也会插入到index.html中)
         new HtmlWebpackPlugin({
+            //可以去HtmlWebpackPlugin的githu仓库看命令
             template: path.resolve(__dirname, 'public/index.html'),
             //<title><%= htmlWebpackPlugin.options.title %></title>更改index的title
             title: 'react-study'
@@ -74,7 +75,7 @@ const config = {
             //添加@绝对路径
             "@": path.resolve(__dirname, 'src')
         },
-        //添加可以省略的文件后缀列表
+        //添加可以省略的文件后缀列表（和顺序有关系）
         extensions: ['.js', '.jsx', '.ts', '.json', '.css', '.vue']
     }
 }
@@ -85,19 +86,29 @@ if (isDev) {
     //一个可以让我们精准定位错误的代码的字符devtool
     config.devtool = "source-map"
     config.plugins.push(
-        //ESlint，当代码变化时，先检测代码规范，只有当代码满足规范时，才执行其它的 后置loader的处理
+        //ESlint，当代码变化时，先检测代码规范，只有当代码满足规范时，才执行其它的 后置loader的处理---eslint-loader废弃！！！
         new ESLintPlugin({
             exclude: ['node_modules']
         })
     )
     //本地服务
     // 要配合 webpack-dev-server 一起使用
+<<<<<<< HEAD
     config.devServer = {
         //可以在这里运行项目后打开浏览器，也可以在命令行配置--open打开
         open: true,
         port: 8888,
         // host:'10.20.158.146',
         hot: true,//启用本地node服务中的socket长连接来实时通信
+=======
+    config.devServer={
+        //可以在这里运行项目后打开浏览器，也可以在命令行配置--open 'chrome'打开
+        open:true,
+        port:8888,
+        // host: "0.0.0.0", //如果你想外部服务器也能访问
+        // host:'10.20.158.146',
+        hot:true,//启用本地node服务中的socket长连接来实时通信
+>>>>>>> remotes/origin/react-1.0.0
         contentBase: './public',//指定本地服务的静态资源目录
         // 当本地项目运行时，发生errors错误，以覆盖层的方式遮住视图
         overlay: {
