@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react' //只要用了jsx就要引入react
 import "@/assets/sass/jsxOne.scss";
 import img from '@/utils/img'
 const fontcolor = {
@@ -10,11 +10,19 @@ const twoName = <div className="box">最新上传表盘</div>
 const allName = <div className="box">全部表盘</div>
 const smartImg = <img className="imgs" src={img.pika} />
 const item = <div className="items">{smartImg}{smartStr}</div>
+//元素是构成 React 应用的最小砖块
+
+// 如果不使用JSX语法糖，应该像这样创建React元素
+const ele6 = React.createElement(
+	'div',
+	{ className: 'jsx', title: '123', id: 'box' },
+	'pooooooooo'
+)
 
 export default class jsxtext extends React.Component {
 	render() {
 		return (
-			<div style={fontcolor} className="jsxstudy">
+			<div style={fontcolor} className="jsxstudy" id="jsxstudy">
 				<div className="title">{str}</div>
 				{/* 这是react组件中的注释功能 */}
 				{twoName}
@@ -37,6 +45,7 @@ export default class jsxtext extends React.Component {
 					<div className="btnAdd btn">加载表盘</div>
 					<div className="btnExcel btn">导入表盘信息</div>
 				</div>
+				{ele6}
 			</div>
 		)
 	}

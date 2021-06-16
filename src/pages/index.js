@@ -33,7 +33,10 @@ const TodoList = loadable(() => import('./todo/TodoList'))
 const Antd = loadable(() => import('./antd/Antd'))
 
 //新的react学习
-const newReact = loadable(() => import('./newReact/jsxOne'))
+const jsxOne = loadable(() => import('./newReact/jsxOne'))
+const moduleTwo = loadable(() => import('./newReact/moduleTwo'))
+const lifethreen = loadable(() => import('./newReact/lifethreen'))
+
 
 
 const routes = [
@@ -185,10 +188,22 @@ const routes = [
         icon: <MailOutlined />,
         children: [
             {
-                id: 1301,
+                id: 1401,
                 path: '/newreact',
                 text: "jsx语法",
-                component: newReact,
+                component: jsxOne,
+            },
+            {
+                id: 1402,
+                path: '/moduletwo',
+                text: "类组件和函数式组件区别",
+                component: moduleTwo,
+            },
+            {
+                id: 1403,
+                path: '/lifethreen',
+                text: "state和生命周期",
+                component: lifethreen,
             }
         ]
     },

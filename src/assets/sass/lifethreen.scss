@@ -1,0 +1,27 @@
+.lifethreen{
+	.title{
+		color: #000;
+		font-size: 20px;
+		font-weight: 600;
+	}
+	.timer{
+		height: 40px;
+		width: 200px;
+		background: red;
+		text-align: center;
+		line-height: 40px;
+		color: #fff;
+		border-radius: 10px;
+		cursor: pointer;
+		font-size: 20px;
+	}
+	.box{
+		font-size: 20px;
+	}
+	.reduce{
+		cursor: pointer;
+	}
+	.add{
+		cursor: pointer;
+	}
+}
