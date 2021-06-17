@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class Box extends React.Component {
+export default class Box1 extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -8,7 +8,6 @@ export default class Box extends React.Component {
 		};
 	}
 	render() {
-		let { type } = this.props
 		return (
 			<div>
 				1111111
