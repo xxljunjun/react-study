@@ -1,24 +1,3 @@
-.box {
-  color: green;
-  font-size: 80px;
-}
-
-.qf-main .qf-box > span {
-  text-align: center;
-  display: inline-block;
-  width: 100px;
-  height: 50px;
-  line-height: 50px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-}
-
-.qf-main .qf-box .on {
-  background: chocolate;
-  color: #fff;
-  border-color: chocolate;
-}
-
 .qf-combine {
   width: 520px;
   height: 260px;

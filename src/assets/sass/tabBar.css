@@ -1,0 +1,25 @@
+.tabBar {
+  color: #000;
+}
+
+.tabBar .lable {
+  display: inline-block;
+  width: 110px;
+  height: 30px;
+  background: red;
+  border-radius: 10px;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.tabBar .active {
+  background: blue;
+}
+
+.tabBar .aline {
+  height: 1px;
+  width: 100%;
+  background: #000;
+}

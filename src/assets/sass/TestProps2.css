@@ -1,0 +1,15 @@
+.qf-main .qf-box > span {
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.qf-main .qf-box .on {
+  background: chocolate;
+  color: #fff;
+  border-color: chocolate;
+}

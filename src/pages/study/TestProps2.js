@@ -1,30 +1,6 @@
 import React from "react"
-
-
-//子组件
-function Lang(props) {
-    let { value, onChangArr } = props
-    function langClick(ele) {
-        // console.log(ele)
-        onChangArr(ele)
-    }
-    return (
-        props.langArr.map((ele => {
-            return (
-                <span
-                    key={ele.id}
-                    onClick={(e) => langClick(ele, e)}
-                    className={value === ele.lang ? "on" : ""}
-                >
-                    {ele.lang_zh}
-                </span>
-            )
-        }))
-
-    )
-}
-
-
+import TestProps2scss from "@/assets/sass/TestProps2.scss"
+import Lang from "@/pages/study/components/Lang.js"
 //父组件
 class TestProps2 extends React.Component {
     constructor(props) {
@@ -63,4 +39,5 @@ class TestProps2 extends React.Component {
         )
     }
 }
+
 export default TestProps2

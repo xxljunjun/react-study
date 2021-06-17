@@ -36,6 +36,7 @@ const Antd = loadable(() => import('./antd/Antd'))
 const jsxOne = loadable(() => import('./newReact/jsxOne'))
 const moduleTwo = loadable(() => import('./newReact/moduleTwo'))
 const lifethreen = loadable(() => import('./newReact/lifethreen'))
+const tabBar = loadable(() => import('./newReact/TabBar'))
 
 
 
@@ -204,6 +205,12 @@ const routes = [
                 path: '/lifethreen',
                 text: "state和生命周期",
                 component: lifethreen,
+            },
+            {
+                id: 1404,
+                path: '/tabBar',
+                text: "tabBar切换",
+                component: tabBar,
             }
         ]
     },
