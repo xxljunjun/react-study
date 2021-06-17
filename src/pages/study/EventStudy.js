@@ -1,4 +1,6 @@
 import React from 'react'
+//npm install @types/v-viewer--save 
+//npm install v-viewer --save
 class EventStudy extends React.Component {
     constructor(props) {
         super(props)

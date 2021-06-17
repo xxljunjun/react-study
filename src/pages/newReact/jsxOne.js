@@ -46,6 +46,13 @@ export default class jsxtext extends React.Component {
 					<div className="btnExcel btn">导入表盘信息</div>
 				</div>
 				{ele6}
+				<input />
+				<select>
+					<option>11111111111111</option>
+					<option>22222222222</option>
+					<option>33333333333333</option>
+					<option>444444444</option>
+				</select>
 			</div>
 		)
 	}
