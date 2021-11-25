@@ -353,7 +353,7 @@ favArr.map((ele,idx,arr)=>{
 //当页面改变时，判断.target.checked的值，true就加入到数组favCheckedArr中，false就从数组中过滤出去删除
  this.setState(state=>({favCheckedArr: e.target.checked ? [...state.favCheckedArr, e.target.value] : state.favCheckedArr.filter(ele=>ele!==e.target.value)}))
 ```
-# 八、react中的生命周期
+# 八、react中的生命周期（TestLife）
 + 分为3个阶段装载阶段(3)，更新阶段(2)，卸载阶段(1)
 + constructor/render/componentDidMount/
 + componentDidUpdate/render-------------shouldComponentUpdate
@@ -439,7 +439,7 @@ componentWillUnmount(){
 // 关闭长连接、定时器，清缓存
 ```
 
-# 九、react中的父子组件传值
+# 九、react中的父子组件传值(TestProps2)
 + 父组件向子组件传值
 ```
 //父传子，使用自定义属性props（可以做任何类型的数据，包括React元素、方法处理器）
