@@ -38,6 +38,7 @@ const tabBar = loadable(() => import("./newReact/TabBar"));
 
 //b站学习
 const onejsx = loadable(() => import("./bilibili/001jsx"));
+const refStudy = loadable(() => import("./bilibili/refStudy"));
 
 const routes = [
   {
@@ -225,6 +226,12 @@ const routes = [
         path: "/001jsx",
         text: "jsx语法",
         component: onejsx,
+      },
+      {
+        id: 1502,
+        path: "/refstudy",
+        text: "ref语法",
+        component: refStudy,
       },
     ],
   },
