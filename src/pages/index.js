@@ -39,6 +39,8 @@ const tabBar = loadable(() => import("./newReact/TabBar"));
 //b站学习
 const onejsx = loadable(() => import("./bilibili/001jsx"));
 const refStudy = loadable(() => import("./bilibili/refStudy"));
+const inputComponent = loadable(() => import("./bilibili/inputComponent"));
+const mylife = loadable(() => import("./bilibili/mylife"));
 
 const routes = [
   {
@@ -232,6 +234,18 @@ const routes = [
         path: "/refstudy",
         text: "ref语法",
         component: refStudy,
+      },
+      {
+        id: 1503,
+        path: "/inputComponent",
+        text: "受控组件和非受控组件",
+        component: inputComponent,
+      },
+      {
+        id: 1504,
+        path: "/mylife",
+        text: "生命周期",
+        component: mylife,
       },
     ],
   },
