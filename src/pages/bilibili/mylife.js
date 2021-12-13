@@ -13,12 +13,18 @@ const Mylife = (props) => {
   let add = () => {
     setName(`小溪流+${1}`);
   };
-
+  //生命周期功能--------第二个参数是为数组，它相当于是 componentDidUpdate()
   useEffect(() => {
     // 相当于是 componentDidMount()
+    console.log("componentDidMount111触发了！！！");
     return () => {
       // 相当于是 componentWillUnmount()
+      console.log("componentWillUnmount111触发了！！！");
     };
+  }, []);
+
+  useEffect(() => {
+    return undefined;
   }, []);
 
   return (
@@ -50,6 +56,7 @@ export default Mylife;
 //   componentDidUpdate(){
 //       console.log("------------,componentDidUpdate")
 //       //调接口，更新完成
+//        //相当于vue中的updated
 //   }
 //   componentWillUnmount(){
 //       console.log("------------,componentWillUnmount")
