@@ -1,0 +1,29 @@
+.item{
+    padding: 0 20px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 480px;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left{
+        .eat{
+            margin-left: 10px;
+        }
+    }
+    &:last-child{
+        border-bottom: 1px solid #ccc;
+    }
+    .btn{
+        height: 30px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius:5px;
+        border: 1px solid #000;
+    }
+}

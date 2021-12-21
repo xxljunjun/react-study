@@ -1,0 +1,18 @@
+.last{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    .btn{
+        width: 150px;
+        height: 30px;
+        border-radius:5px;
+        border: 1px solid #000;
+        cursor: pointer;
+    }
+    .txt{
+        margin-left: 10px;
+    }
+}

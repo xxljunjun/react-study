@@ -41,6 +41,7 @@ const onejsx = loadable(() => import("./bilibili/001jsx"));
 const refStudy = loadable(() => import("./bilibili/refStudy"));
 const inputComponent = loadable(() => import("./bilibili/inputComponent"));
 const mylife = loadable(() => import("./bilibili/mylife"));
+const BiTodolist = loadable(() => import("./bilibili/BiTodolist/"));
 
 const routes = [
   {
@@ -246,6 +247,12 @@ const routes = [
         path: "/mylife",
         text: "生命周期",
         component: mylife,
+      },
+      {
+        id: 1505,
+        path: "/todolist",
+        text: "react的todolist",
+        component: BiTodolist,
       },
     ],
   },

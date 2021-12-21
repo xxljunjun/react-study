@@ -1,0 +1,13 @@
+.input_box{
+    padding: 10px;
+    .tast{
+        height: 30px;
+        width: 480px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+        &:focus{
+            border: 1px solid #000;
+        }
+    }
+}
