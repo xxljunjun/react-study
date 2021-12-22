@@ -42,6 +42,8 @@ const refStudy = loadable(() => import("./bilibili/refStudy"));
 const inputComponent = loadable(() => import("./bilibili/inputComponent"));
 const mylife = loadable(() => import("./bilibili/mylife"));
 const BiTodolist = loadable(() => import("./bilibili/BiTodolist/"));
+const Github = loadable(() => import("./bilibili/Github/"));
+
 
 const routes = [
   {
@@ -253,6 +255,11 @@ const routes = [
         path: "/todolist",
         text: "react的todolist",
         component: BiTodolist,
+      },{
+        id: 1506,
+        path: "/github",
+        text: "github的搜索功能",
+        component: Github,
       },
     ],
   },

@@ -2,12 +2,13 @@ import React,{useState} from 'react'
 import './index.scss'
 const Item = props =>{
     let [status,setStatus] = useState(false)
-    const {valobj} = props
+    const {valobj,del} = props
     const handler = (val)=>{
         setStatus(val)
     }
     const toDelete = ()=>{
         console.log(valobj)
+        del(valobj.id)
     }
     return(
         <>

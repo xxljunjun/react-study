@@ -14,12 +14,26 @@ const BiTodolist = (props) => {
   const add = (obj)=>{
     setListArr([obj,...listArr])
   }
+  const del = (id) =>{
+    console.log(id)
+    let newlistArr = listArr.filter(val=>{
+       if(val.id !==id ) return val
+    })
+    setListArr(newlistArr)
+  }
+
+  const delComplate = ()=>{
+    let newlistArr = listArr.filter(val=>{
+        if(!val.check) return val
+    })
+    setListArr(newlistArr)
+  }
   return (
     <>
       <div className="todolist">
         <Header add={add}/>
-        <List listArr={listArr}/>
-        <Bottom />
+        <List listArr={listArr} del={del}/>
+        <Bottom delComplate={delComplate}/>
       </div>
     </>
   );
