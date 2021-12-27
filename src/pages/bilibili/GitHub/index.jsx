@@ -10,6 +10,7 @@ const GitHub = props =>{
     let [isFirst,setIsfirst] = useState(true)
     const goToSearch = ()=>{
         console.log('点击了搜索',keyword)
+        setIsfirst(false)
         setIsLoading(true)
         axios(`https://api.github.com/search/users?q=${keyword}`).then(res=>{
             console.log("请求成功",res)
@@ -23,7 +24,7 @@ const GitHub = props =>{
         })
     }
     useEffect(()=>{
-        setIsfirst(false)
+        // setIsfirst(false)
         return undefined
     },[])
     return(

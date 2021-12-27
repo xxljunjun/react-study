@@ -151,3 +151,9 @@ class Son extends React.Component{
     console.log("son---,componentWillUnmount")
   }
 }
+
+
+/*
+  最新的react中的生命周期中
+    
+*/
